@@ -34,7 +34,7 @@ TODO
 ## 📦 Installation
 1. Clone the repo
 ```bash
-   git clone https://github.com/syedluri/news-fetch-scheduler.git
+   git clone https://github.com/yedlurisrinu/todo_crew_app.git
    cd todo_crew_app
 ```
 
