@@ -1,0 +1,49 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todos-crew-app
+    ports:
+      - "8000:8000"           # host:container
+    environment:
+      - PYTHONPATH=src
+      - VAULT_ADDR=http://vault-server:8200 # container name as host name
+      - VAULT_TOKEN=${VAULT_TOKEN}
+      - VAULT_SECRET_PATH=secret/AI
+      - TODOS_API=http://todos-api:5000
+    networks:
+      - vault-network
+      - todos-api_default
+    volumes:
+      - ./src:/app/src        # hot reload in dev (remove in prod)
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 300s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+# compose to connect to existing vault network
+networks:
+  vault-network:
+    external: true
+  todos-api_default:
+    external: true
+#  vault-server:
+#    image: hashicorp/vault:latest
+#    container_name: vault_server
+#    ports:
+#      - "8200:8200"
+#    cap_add:
+#      - IPC_LOCK
+#    environment:
+#      - VAULT_DEV_ROOT_TOKEN_ID=${VAULT_TOKEN}
+#    volumes:
+#      - vault-data:/vault/data
+#
+#volumes:
+#  vault-data:
+
+

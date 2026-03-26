@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "content": "Read Chapter 7 of 'Clean Code' — focus on writing small, single-purpose functions."
+  },
+  {
+    "id": 2,
+    "content": "Experiment with python async framework"
+  },
+  {
+    "id": 3,
+    "content": "Review different types of SQL joins — especially LEFT and FULL OUTER joins."
+  },
+  {
+    "id": 4,
+    "content": "Watch lecture on consensus algorithms — try to summarize Paxos in your own words."
+  },
+  {
+    "id": 5,
+    "content": "Figure out the difference between python async and multi threading."
+  },
+  {
+    "id": 6,
+    "content": "Draft blog post: '3 Things I Learned About Writing Better Functions.'"
+  },
+  {
+    "id": 7,
+    "content": "Ask Aram about good beginner-friendly open-source projects to contribute to."
+  }
+]
