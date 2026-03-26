@@ -4,8 +4,8 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-The project is simple multi-agent RAG application that takes user input to get, create, update and delete todo tasks.
-and interact with ChatGpt to fetch any task related learning content and summarizes.
+The project is a simple multi-agent RAG application using which user can get, create, update and delete todo tasks
+and interact with ChatGPT to fetch any task related learning content and summaries.
 ---
 
 ## TODOs
